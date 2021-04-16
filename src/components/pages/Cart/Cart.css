@@ -1,0 +1,18 @@
+.cart-page-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    bottom: 0;
+    display: grid;
+    justify-content: center;
+    gap: 5px;
+}
+
+.cart-list-wrapper {
+    margin: 10vh 0;
+    grid-template-columns: 50% 50%;
+}
+
+hr {
+    width: 80%;
+    border: 1px solid white;
+}

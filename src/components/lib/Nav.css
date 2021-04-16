@@ -1,0 +1,19 @@
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    z-index: 99;
+}
+
+.nav-links {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}

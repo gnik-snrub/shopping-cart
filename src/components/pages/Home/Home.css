@@ -1,0 +1,23 @@
+.home-wrapper {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.home-content {
+    background: radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba( 0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    font-size: 4rem;
+    width: 45%;
+    -webkit-text-stroke: 1px black;
+    white-space: pre-line;
+}
+
+.home-content p {
+    -webkit-text-stroke: 1px black;
+    margin: 0px;
+}
+
+.home-content hr {
+    margin: 20px;
+    width: 100%;
+}

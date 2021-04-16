@@ -1,0 +1,22 @@
+.details-right {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.image-wrapper {
+    max-width: 45%;
+}
+
+.game-image {
+    max-width: 100%;
+}
