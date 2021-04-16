@@ -9,18 +9,14 @@ import Shop from './components/pages/Shop/Shop'
 import ItemDetail from './components/pages/ItemDetail/ItemDetail'
 import Home from './components/pages/Home/Home'
 import ScrollToTop from './components/lib/ScrollToTop'
+import Blur from './components/lib/Blur'
 import gameData from './data.js'
 import './App.css'
-import React, { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 
 const App = () => {
 	const [games, ] = useState(gameData)
 	const [cart, setCart] = useState([])
-	const blurFilter = useRef(null)
-
-	const fadeInBlur = () => {
-		blurFilter.current.classList.add('fade-in')
-	}
 
 	const addToCart = (item) => {
 		let cartCopy = [ ...cart ]
@@ -54,23 +50,30 @@ const App = () => {
 		<Router>
     		<div className="App">
 				<ScrollToTop />
-				<div className = 'background-image'/>
-				<Nav cartCount = {cart.length}/>
+				<Switch>
+					<Route exact path = '/'>
+						<Nav cartCount = {cart.length}/>
+						<div className = 'background-image'/>
+					</Route>
+					<Route>
+						<Nav cartCount = {cart.length}/>
+						<div className = 'background-image'/>
+        				<Blur />
+					</Route>
+				</Switch>
 				<Switch>
 					<Route exact path = '/'>
 						<Home />
 					</Route>
-					<div className = 'blur-filter' ref = {blurFilter} onLoad = {fadeInBlur} >
-						<Route exact path = '/shop'>
-							<Shop games = {games} />
-						</Route>
-						<Route exact path = '/shop/:link'>
-							<ItemDetail games = {games} addItem = {addToCart} />
-						</Route>
-						<Route exact path = '/cart'>
-							<Cart cartData = {cart} add = {addToCart} remove = {removeFromCart} />
-						</Route>
-					</div>
+					<Route exact path = '/shop'>
+						<Shop games = {games} />
+					</Route>
+					<Route exact path = '/shop/:link'>
+						<ItemDetail games = {games} addItem = {addToCart} />
+					</Route>
+					<Route exact path = '/cart'>
+						<Cart cartData = {cart} add = {addToCart} remove = {removeFromCart} />
+					</Route>
 				</Switch>
     		</div>
 		</Router>

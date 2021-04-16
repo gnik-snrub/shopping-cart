@@ -33,8 +33,8 @@ const Shop = (props) => {
             <div className = 'list-wrapper'>
                 <div className = 'item-list'>
                     {items.map(item => (
-			            <FadeIn>
-                            <Link to = {`/shop/${item.link}`} style = {navStyle} key = {item.link} >
+			            <FadeIn key = {item.link}>
+                            <Link to = {`/shop/${item.link}`} style = {navStyle} >
                                 <Image
                                     filePath = {`../assets/${item.link}/logo.png`}
                                     className = {'link-logo'}

@@ -28,20 +28,3 @@ body::-webkit-scrollbar {
 .App {
     text-align: center;
 }
-
-.blur-filter {
-    position: inherit;
-    margin-top: -10vh;
-    padding-top: 10vh;
-    height: 100%;
-    width: 100%;
-    z-index: -99;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    opacity: 0;
-    transition: 500ms;
-}
-
-.fade-in {
-    opacity: 1;
-}
