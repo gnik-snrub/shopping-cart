@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
 import './CartItem.css'
 import Image from '../../lib/Image'
+import { useState } from 'react'
 
 const CartItem = (props) => {
 	const { game, add, remove } = props
+
+	const [logoPath, ] = useState(`/assets/${game.link}/logo.png`)
 
 	const addItem = (game) => {
 		add(game)
@@ -18,7 +21,7 @@ const CartItem = (props) => {
             <div className = 'cart-item'>
 				<Link to = {`/shop/${game.link}`}>
 					<Image 
-                    	filePath = {`../assets/${game.link}/logo.png`}
+                    	filePath = {logoPath}
                     	className = {'cart-item-logo'}
 	                    alt = {`${game.name} logo`}
 					/>

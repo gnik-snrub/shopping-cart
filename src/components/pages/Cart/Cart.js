@@ -24,7 +24,7 @@ const Cart = (props) => {
 		let cartItemElements = []
 		for (let game of cartData) {
 			cartItemElements.push(
-				<FadeIn>
+				<FadeIn key = {game.name}>
 					<div>
 						<hr />
 						<CartItem game = {game} add = {addItem} remove = {removeItem} />

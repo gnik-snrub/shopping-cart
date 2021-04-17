@@ -47,7 +47,7 @@ const App = () => {
 	}
 
   	return (
-		<Router>
+		<Router basename = 'shopping-cart'>
     		<div className="App">
 				<ScrollToTop />
 				<Switch>

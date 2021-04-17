@@ -3,7 +3,7 @@ import Image from '../../lib/Image'
 import './DetailsLeft.css'
 
 const DetailsLeft = (props) => {
-    const { game, cart } = props
+    const { game, cart, link } = props
 
     const collectGenres = () => {
         const genres = game.genres
@@ -20,7 +20,7 @@ const DetailsLeft = (props) => {
         <div className = 'details-left'>
             <div className = 'details-logo-wrapper'>
                 <Image 
-                    filePath = {`../assets/${game.link}/logo.png`}
+                    filePath = {`/assets/${link}/logo.png`}
                     className = {'game-logo'}
                     alt = {`${game.name} logo`}
                 />

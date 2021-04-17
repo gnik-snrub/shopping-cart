@@ -16,15 +16,15 @@ const Shop = (props) => {
     }, [])
 
     const getGameData = () => {
-        const items = []
+        const tempItems = []
         for (let i in games) {
-            items.push(games[i])
+            tempItems.push(games[i])
         }
-        setItems(items)
+        setItems(tempItems)
     }
     
     const navStyle = {
-        color: 'black',
+        color: 'white',
         textDecoration: 'none'
     }
 
@@ -34,9 +34,9 @@ const Shop = (props) => {
                 <div className = 'item-list'>
                     {items.map(item => (
 			            <FadeIn key = {item.link}>
-                            <Link to = {`/shop/${item.link}`} style = {navStyle} >
+                            <Link to = {`/shop/${item.link}`} style = {navStyle}>
                                 <Image
-                                    filePath = {`../assets/${item.link}/logo.png`}
+                                    filePath = {`/assets/${item.link}/logo.png`}
                                     className = {'link-logo'}
                                     alt = {`${item.name} logo`}
                                 />

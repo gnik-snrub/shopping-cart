@@ -49,7 +49,7 @@ const ItemDetail = (props) => {
             <div className = 'game-page'>
                 <div className = 'splash-wrapper'>
                     <Image
-                        filePath = {`../assets/${game.link}/splash.jpg`}
+                        filePath = {`/assets/${link}/splash.jpg`}
                         className = {'background-splash'}
                         alt = {`${game.name} splash`}
                     />
@@ -58,8 +58,8 @@ const ItemDetail = (props) => {
                     <div>↓</div>
                 </div>
                 <div className = 'game-detail-area'>
-                    <DetailsLeft game = {game} cart = {addToCart} />
-                    <DetailsRight game = {game} />
+                    <DetailsLeft game = {game} cart = {addToCart} link = {link}/>
+                    <DetailsRight game = {game} link = {link}/>
                 </div>
             </div>
 		</FadeIn>
