@@ -1,10 +1,7 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 const Image = (props) => {
     const [imageSource, ] = useState(process.env.PUBLIC_URL + props.filePath)
-    useEffect(() => {
-        console.log(imageSource)
-    })
     
     return (
         <img

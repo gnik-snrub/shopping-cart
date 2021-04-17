@@ -13,7 +13,7 @@ const DetailsRight = (props) => {
             <div className = 'image-grid'>
                 <div
                     className = {'image-wrapper'}
-                    onClick = {() => {openImage(`./${game.link}/1.jpg`)}}
+                    onClick = {() => {openImage(`/assets/${game.link}/1.jpg`)}}
                 >
                     <Image
                         filePath = {`/assets/${link}/1.jpg`}
@@ -23,7 +23,7 @@ const DetailsRight = (props) => {
                 </div>
                 <div
                     className = {'image-wrapper'}
-                    onClick = {() => {openImage(`./${game.link}/2.jpg`)}}
+                    onClick = {() => {openImage(`/assets/${game.link}/2.jpg`)}}
                 >
                     <Image
                         filePath = {`/assets/${link}/2.jpg`}
@@ -33,7 +33,7 @@ const DetailsRight = (props) => {
                 </div>
                 <div 
                     className = {'image-wrapper'}
-                    onClick = {() => {openImage(`./${game.link}/3.jpg`)}}
+                    onClick = {() => {openImage(`/assets/${game.link}/3.jpg`)}}
                 >
                     <Image
                         filePath = {`/assets/${link}/3.jpg`}
@@ -43,7 +43,7 @@ const DetailsRight = (props) => {
                 </div>
                 <div 
                     className = {'image-wrapper'}
-                    onClick = {() => {openImage(`./${game.link}/4.jpg`)}}
+                    onClick = {() => {openImage(`/assets/${game.link}/4.jpg`)}}
                 >
                     <Image
                         filePath = {`/assets/${link}/4.jpg`}
